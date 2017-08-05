@@ -12,6 +12,7 @@ f=open("config.txt","r")
 m[0]=int(f.read())
 f.close()
 
+
 def check_d(name):
     fo=open("during.json","r")
     c=fo.read()
@@ -120,8 +121,8 @@ def text_reply(msg):
             
             write_file(fn,c)
             itchat.send('（来自Python脚本的自动回复）你的考号是%s'%num,msg['FromUserName'])
-            itchat.send_file("questions.pdf",msg['FromUserName'])
-            itchat.send_file("paper.pdf",msg['FromUserName'])
+            for file in os.listdir(test_paper):
+                itchat.send_file(file,msg['FromUserName'])
             itchat.send('（来自Python脚本的自动回复）成功获取试题！计时开始！',msg['FromUserName'])
             itchat.send('（来自Python脚本的自动回复）现在你可以通过文件、图片等形式提交答案，可以提交多个文件或多次提交',msg['FromUserName'])
             itchat.send('（来自Python脚本的自动回复）回复： 交卷  会停止计时，之后提交的答案无效',msg['FromUserName'])
