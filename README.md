@@ -9,3 +9,5 @@ A test number will be given too.
 they can post their answers by pictures or other type of file, which will be download to your computer and put in a folder named by their nickname on weichat. 
 
 Now the project only has a Chinese version without annotation or API.
+
+##Warning: This program may cause your account to be disabled!!!
